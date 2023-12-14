@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Verification</title>
+    <style>
+        /* Import Google font - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            background: #E3F2FD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .verification-container {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #724ae8;
+            font-size: 1.4rem;
+        }
+        .qr-code-container {
+            border: 5px solid #724ae8; /* Purple border style */
+            border-radius: 15px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .qr-code {
+            display: block;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            background: #724ae8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="verification-container">
+        <h1>QR Code Verification</h1>
+        <div id="output">
+            {% if message %}
+            <p>{{ message }}</p>
+            {% endif %}
+        </div>
+        <div class="qr-code-container">
+            <img class="qr-code" src="data:image/png;base64,{{ qr_image }}" alt="QR Code">
+        </div>
+        <form action="/verify" method="POST">
+            <div class="form-group">
+                <label for="verification_code">Enter 6-Digit Verification Code:</label>
+                <input type="text" id="verification_code" name="verification_code" required>
+            </div>
+            <div class="button-container">
+                <button type="submit">Verify</button>
+            </div>
+        </form>
+        <p>Attempts Remaining: {{ attempts_remaining }}</p>
+    </div>
+</body>
+</html>
