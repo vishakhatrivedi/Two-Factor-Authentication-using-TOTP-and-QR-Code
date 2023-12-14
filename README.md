@@ -8,19 +8,26 @@ It also features a GPT 3.5 Turbo Powered Chatbot with tokens limited to 30 per s
 
 
 **Login/Register:**
+
 <img width="333" alt="image" src="https://github.com/vishakhatrivedi/Two-Factor-Authentication-using-TOTP-and-QR-Code/assets/91044422/5764a9a0-8217-4cfc-b6fc-ecd6706b1f75">
+
 -The MySQL database stores the details of the user automatically.
+
 <img width="393" alt="image" src="https://github.com/vishakhatrivedi/Two-Factor-Authentication-using-TOTP-and-QR-Code/assets/91044422/09ee7951-b179-4871-b7f1-77639dc5dc7d">
 
 
 **Scanning the QR code and entering a time based OTP (TOTP):**
+
 <img width="300" alt="image" src="https://github.com/vishakhatrivedi/Two-Factor-Authentication-using-TOTP-and-QR-Code/assets/91044422/61048589-2257-4ec3-be96-225c0ce3b1ec">
+
 - Scan the QR code using any authentication app, such as Google Authenticator.
 
  
  **Chatbot:**
+ 
 <img width="929" alt="image" src="https://github.com/vishakhatrivedi/Two-Factor-Authentication-using-TOTP-and-QR-Code/assets/91044422/0de3fed1-40cb-4545-b43d-ac655454c725">
 
 
 On logging out, the MySQL database stores the audit log with login and log out time.
+
 <img width="407" alt="image" src="https://github.com/vishakhatrivedi/Two-Factor-Authentication-using-TOTP-and-QR-Code/assets/91044422/582aafb6-c13d-4eb1-8e88-40f73415e67a">
