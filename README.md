@@ -14,7 +14,8 @@ It also features a GPT 3.5 Turbo Powered Chatbot with tokens limited to 30 per s
 
 - The MySQL database stores the details of the user automatically.
 
-<img width="393" alt="image" src="https://github.com/vishakhatrivedi/Two-Factor-Authentication-using-TOTP-and-QR-Code/assets/91044422/09ee7951-b179-4871-b7f1-77639dc5dc7d">
+<img width="343" alt="image" src="https://github.com/vishakhatrivedi/Two-Factor-Authentication-using-TOTP-and-QR-Code/assets/91044422/328322a8-798f-4c2d-9172-a3b86e082b85">
+
 
 
 <h2>Scanning the QR code and entering a time based OTP (TOTP):</h2>
